@@ -8,9 +8,9 @@ import (
 
 	"github.com/honeycombio/libhoney-go/transmission"
 
+	"github.com/Cloverhound/beeline-go/trace"
 	"github.com/honeycombio/beeline-go/client"
 	"github.com/honeycombio/beeline-go/sample"
-	"github.com/honeycombio/beeline-go/trace"
 	libhoney "github.com/honeycombio/libhoney-go"
 )
 
