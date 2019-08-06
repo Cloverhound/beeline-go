@@ -6,10 +6,10 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/felixge/httpsnoop"
 	"github.com/Cloverhound/beeline-go/propagation"
 	"github.com/Cloverhound/beeline-go/timer"
 	"github.com/Cloverhound/beeline-go/trace"
+	"github.com/felixge/httpsnoop"
 	libhoney "github.com/honeycombio/libhoney-go"
 )
 
@@ -200,7 +200,7 @@ func BuildDBSpan(ctx context.Context, bld *libhoney.Builder, query string, args 
 		}
 		span.AddRollupField("db.duration_ms", duration)
 		span.AddRollupField("db.call_count", 1)
-		span.Send()
+		span.Finish()
 	}
 	return ctx, span, fn
 }
