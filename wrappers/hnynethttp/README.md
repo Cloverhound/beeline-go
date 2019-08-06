@@ -1,1 +1,1 @@
-Documentation available via [godoc](https://godoc.org/github.com/honeycombio/beeline-go/wrappers/hnynethttp)
+Documentation available via [godoc](https://godoc.org/github.com/Cloverhound/beeline-go/wrappers/hnynethttp)

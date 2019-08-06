@@ -5,7 +5,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	beeline "github.com/honeycombio/beeline-go"
+	beeline "github.com/Cloverhound/beeline-go"
 	libhoney "github.com/honeycombio/libhoney-go"
 	"github.com/honeycombio/libhoney-go/transmission"
 	"github.com/stretchr/testify/assert"

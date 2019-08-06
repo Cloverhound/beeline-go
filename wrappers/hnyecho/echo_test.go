@@ -5,7 +5,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	beeline "github.com/honeycombio/beeline-go"
+	beeline "github.com/Cloverhound/beeline-go"
 	libhoney "github.com/honeycombio/libhoney-go"
 	"github.com/honeycombio/libhoney-go/transmission"
 	echo "github.com/labstack/echo/v4"
@@ -51,7 +51,7 @@ func TestEchoMiddleware(t *testing.T) {
 	for _, field := range handlerNameFields {
 		handler, ok := fields[field]
 		assert.True(t, ok, "handler.name field must exist on middleware generated event")
-		assert.Equal(t, "github.com/honeycombio/beeline-go/wrappers/hnyecho.helloHandler", handler, "successfully served request should have correct matched handler")
+		assert.Equal(t, "github.com/Cloverhound/beeline-go/wrappers/hnyecho.helloHandler", handler, "successfully served request should have correct matched handler")
 	}
 
 	// route fields

@@ -9,9 +9,9 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 
-	"github.com/honeycombio/beeline-go"
-	"github.com/honeycombio/beeline-go/wrappers/hnynethttp"
-	"github.com/honeycombio/beeline-go/wrappers/hnysql"
+	"github.com/Cloverhound/beeline-go"
+	"github.com/Cloverhound/beeline-go/wrappers/hnynethttp"
+	"github.com/Cloverhound/beeline-go/wrappers/hnysql"
 )
 
 func main() {

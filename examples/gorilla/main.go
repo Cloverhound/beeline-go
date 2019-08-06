@@ -6,9 +6,9 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/honeycombio/beeline-go"
-	"github.com/honeycombio/beeline-go/wrappers/hnygorilla"
-	"github.com/honeycombio/beeline-go/wrappers/hnynethttp"
+	"github.com/Cloverhound/beeline-go"
+	"github.com/Cloverhound/beeline-go/wrappers/hnygorilla"
+	"github.com/Cloverhound/beeline-go/wrappers/hnynethttp"
 )
 
 func main() {

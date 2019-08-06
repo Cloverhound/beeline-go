@@ -5,9 +5,9 @@ import (
 	"os"
 
 	"github.com/gobuffalo/pop"
-	beeline "github.com/honeycombio/beeline-go"
-	"github.com/honeycombio/beeline-go/wrappers/hnypop"
-	"github.com/honeycombio/beeline-go/wrappers/hnysqlx"
+	beeline "github.com/Cloverhound/beeline-go"
+	"github.com/Cloverhound/beeline-go/wrappers/hnypop"
+	"github.com/Cloverhound/beeline-go/wrappers/hnysqlx"
 	"github.com/jmoiron/sqlx"
 )
 

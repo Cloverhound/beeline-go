@@ -5,10 +5,10 @@ import (
 	"sync"
 	"time"
 
+	"github.com/Cloverhound/beeline-go/client"
+	"github.com/Cloverhound/beeline-go/propagation"
+	"github.com/Cloverhound/beeline-go/sample"
 	"github.com/google/uuid"
-	"github.com/honeycombio/beeline-go/client"
-	"github.com/honeycombio/beeline-go/propagation"
-	"github.com/honeycombio/beeline-go/sample"
 	libhoney "github.com/honeycombio/libhoney-go"
 )
 

@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/honeycombio/beeline-go/wrappers/common"
+	"github.com/Cloverhound/beeline-go/wrappers/common"
 	"goji.io/middleware"
 	"goji.io/pat"
 )

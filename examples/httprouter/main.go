@@ -5,9 +5,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/honeycombio/beeline-go"
-	"github.com/honeycombio/beeline-go/wrappers/hnyhttprouter"
-	"github.com/honeycombio/beeline-go/wrappers/hnynethttp"
+	"github.com/Cloverhound/beeline-go"
+	"github.com/Cloverhound/beeline-go/wrappers/hnyhttprouter"
+	"github.com/Cloverhound/beeline-go/wrappers/hnynethttp"
 	"github.com/julienschmidt/httprouter"
 )
 

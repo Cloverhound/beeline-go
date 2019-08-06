@@ -6,7 +6,7 @@ import (
 	"runtime"
 
 	"github.com/gorilla/mux"
-	"github.com/honeycombio/beeline-go/wrappers/common"
+	"github.com/Cloverhound/beeline-go/wrappers/common"
 )
 
 // Middleware is a gorilla middleware to add Honeycomb instrumentation to the

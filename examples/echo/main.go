@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/honeycombio/beeline-go"
-	"github.com/honeycombio/beeline-go/wrappers/hnyecho"
-	"github.com/labstack/echo"
+	"github.com/Cloverhound/beeline-go"
+	"github.com/Cloverhound/beeline-go/wrappers/hnyecho"
+	echo "github.com/labstack/echo/v4"
 )
 
 func main() {

@@ -5,8 +5,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/honeycombio/beeline-go"
-	"github.com/honeycombio/beeline-go/wrappers/hnynethttp"
+	"github.com/Cloverhound/beeline-go"
+	"github.com/Cloverhound/beeline-go/wrappers/hnynethttp"
 )
 
 // Simple server example demonstrating how to use `hnynethttp.WrapHandlerFunc(...)`.

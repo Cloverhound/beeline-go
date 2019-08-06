@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/honeycombio/beeline-go/client"
-	"github.com/honeycombio/beeline-go/propagation"
+	"github.com/Cloverhound/beeline-go/client"
+	"github.com/Cloverhound/beeline-go/propagation"
 	libhoney "github.com/honeycombio/libhoney-go"
 	"github.com/honeycombio/libhoney-go/transmission"
 	"github.com/stretchr/testify/assert"

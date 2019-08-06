@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/honeycombio/beeline-go"
-	"github.com/honeycombio/beeline-go/wrappers/hnygoji"
-	"github.com/honeycombio/beeline-go/wrappers/hnynethttp"
+	"github.com/Cloverhound/beeline-go"
+	"github.com/Cloverhound/beeline-go/wrappers/hnygoji"
+	"github.com/Cloverhound/beeline-go/wrappers/hnynethttp"
 
 	"goji.io"
 	"goji.io/pat"

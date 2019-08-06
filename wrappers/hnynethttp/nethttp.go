@@ -6,10 +6,10 @@ import (
 	"reflect"
 	"runtime"
 
-	"github.com/honeycombio/beeline-go/propagation"
-	"github.com/honeycombio/beeline-go/timer"
-	"github.com/honeycombio/beeline-go/trace"
-	"github.com/honeycombio/beeline-go/wrappers/common"
+	"github.com/Cloverhound/beeline-go/propagation"
+	"github.com/Cloverhound/beeline-go/timer"
+	"github.com/Cloverhound/beeline-go/trace"
+	"github.com/Cloverhound/beeline-go/wrappers/common"
 	libhoney "github.com/honeycombio/libhoney-go"
 )
 

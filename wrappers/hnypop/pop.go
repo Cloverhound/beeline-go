@@ -5,7 +5,7 @@ import (
 	"math/rand"
 
 	"github.com/gobuffalo/pop"
-	"github.com/honeycombio/beeline-go/wrappers/hnysqlx"
+	"github.com/Cloverhound/beeline-go/wrappers/hnysqlx"
 	"github.com/jmoiron/sqlx"
 )
 

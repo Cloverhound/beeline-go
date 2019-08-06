@@ -8,7 +8,7 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/honeycombio/beeline-go/wrappers/common"
+	"github.com/Cloverhound/beeline-go/wrappers/common"
 	"github.com/honeycombio/libhoney-go"
 )
 

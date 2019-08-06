@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/honeycombio/beeline-go/wrappers/hnynethttp"
+	"github.com/Cloverhound/beeline-go/wrappers/hnynethttp"
 	"github.com/julienschmidt/httprouter"
 )
 

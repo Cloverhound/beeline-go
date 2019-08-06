@@ -11,7 +11,7 @@ import (
 	"github.com/jmoiron/sqlx"
 	"github.com/jmoiron/sqlx/reflectx"
 
-	"github.com/honeycombio/beeline-go/wrappers/common"
+	"github.com/Cloverhound/beeline-go/wrappers/common"
 	"github.com/honeycombio/libhoney-go"
 )
 

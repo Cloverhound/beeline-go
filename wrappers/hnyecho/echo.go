@@ -3,7 +3,7 @@ package hnyecho
 import (
 	"sync"
 
-	"github.com/honeycombio/beeline-go/wrappers/common"
+	"github.com/Cloverhound/beeline-go/wrappers/common"
 	echo "github.com/labstack/echo/v4"
 )
 

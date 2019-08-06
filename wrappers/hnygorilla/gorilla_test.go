@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/gorilla/mux"
-	beeline "github.com/honeycombio/beeline-go"
+	beeline "github.com/Cloverhound/beeline-go"
 	libhoney "github.com/honeycombio/libhoney-go"
 	"github.com/honeycombio/libhoney-go/transmission"
 	"github.com/stretchr/testify/assert"
