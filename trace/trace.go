@@ -167,6 +167,7 @@ func (t *Trace) Send() {
 type Span struct {
 	isAsync      bool
 	isSent       bool
+	isFinished   bool
 	isRoot       bool
 	children     []*Span
 	childrenLock sync.Mutex
@@ -249,6 +250,10 @@ func (s *Span) Send() {
 		return
 	}
 
+	if !s.isFinished {
+		s.finishLocked()
+	}
+
 	s.sendLocked()
 }
 
@@ -268,11 +273,7 @@ func (s *Span) sendLocked() {
 	if s.ev == nil {
 		return
 	}
-	// finish the timer for this span
-	if !s.started.IsZero() {
-		dur := float64(time.Since(s.started)) / float64(time.Millisecond)
-		s.AddField("duration_ms", dur)
-	}
+
 	// set trace IDs for this span
 	s.ev.AddField("trace.trace_id", s.trace.traceID)
 	if s.parentID != "" {
@@ -312,6 +313,70 @@ func (s *Span) sendLocked() {
 		s.parent.removeChildSpan(s)
 	}
 
+}
+
+// Finish marks a span complete.
+// Finishing a span also triggers finishing all synchronous
+// child spans - in other words, if any synchronous child span has not yet been
+// finished, finishing the parent will finish the children as well.
+func (s *Span) Finish() {
+	// If this is the root then we are ready to send
+	if s.isRoot {
+		s.Send()
+		return
+	}
+
+	s.sendLock.Lock()
+	defer s.sendLock.Unlock()
+	// don't send already sent spans
+	if s.isFinished {
+		return
+	}
+
+	s.finishLocked()
+}
+
+func (s *Span) finishLocked() {
+	if s.ev == nil {
+		return
+	}
+	// finish the timer for this span
+	if !s.started.IsZero() {
+		dur := float64(time.Since(s.started)) / float64(time.Millisecond)
+		s.AddField("duration_ms", dur)
+	}
+
+	s.childrenLock.Lock()
+	var childrenToFinish []*Span
+	if len(s.children) > 0 {
+		childrenToFinish = make([]*Span, 0, len(s.children))
+		for _, child := range s.children {
+			if !child.IsAsync() {
+				// queue children up to be finished. We'd deadlock if we actually sent the
+				// child here.
+				childrenToFinish = append(childrenToFinish, child)
+			}
+		}
+	}
+	s.childrenLock.Unlock()
+
+	for _, child := range childrenToFinish {
+		child.finishByParent()
+	}
+
+	s.isFinished = true
+}
+
+func (s *Span) finishByParent() {
+	s.sendLock.Lock()
+	defer s.sendLock.Unlock()
+	// don't finish already completed spans
+	if s.isFinished {
+		return
+	}
+
+	s.AddField("meta.finished_by_parent", true)
+	s.finishLocked()
 }
 
 // IsAsync reveals whether the span is asynchronous (true) or synchronous (false).
